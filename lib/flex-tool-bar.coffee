@@ -165,10 +165,10 @@ module.exports =
       console.error error
 
   fixToolBarHeight: ->
-    @toolBar.toolBar.element.style.height = "#{@toolBar.toolBar.element.offsetHeight}px"
+    (@toolBar.toolBarView or @toolBar.toolBar).element.style.height = "#{(@toolBar.toolBarView or @toolBar.toolBar).element.offsetHeight}px"
 
   unfixToolBarHeight: ->
-    @toolBar.toolBar.element.style.height = null
+    (@toolBar.toolBarView or @toolBar.toolBar).element.style.height = null
 
   addButtons: (toolBarButtons) ->
     if toolBarButtons?
